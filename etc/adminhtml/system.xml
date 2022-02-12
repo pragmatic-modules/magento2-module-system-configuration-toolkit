@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="pragmatic" translate="label" sortOrder="600">
+            <label>Pragmatic Modules</label>
+        </tab>
+        <section id="system_configuration_toolkit" showInDefault="1" translate="label" sortOrder="50">
+            <label>System Configuration Toolkit</label>
+            <resource>Magento_Config::config</resource>
+            <tab>pragmatic</tab>
+            <group id="general" showInDefault="1" translate="label">
+                <label>General</label>
+                <field id="enabled" type="select" showInDefault="1" translate="label">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="sort_orders_enabled" type="select" showInDefault="1" translate="label">
+                    <label>Show Tabs/Sections/Groups/Fields sort order?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>You must clear config cache type after toggling this value in order to changes to take effect.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="paths_enabled" type="select" showInDefault="1" translate="label">
+                    <label>Show field's config path in the comments</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
