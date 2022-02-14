@@ -1,5 +1,5 @@
 {
-    "name": "pragmatic/magento2-module-system-configuration-toolkit",
+    "name": "pragmatic-modules/magento2-module-system-configuration-toolkit",
     "description": "System Configuration Toolkit is a Magento 2 module that shows sort order of system configuration's tabs, sections, groups, and fields. It also helps you to see full field paths, so no more looking for those.",
     "type": "magento2-module",
     "homepage": "https://rusin.work",
