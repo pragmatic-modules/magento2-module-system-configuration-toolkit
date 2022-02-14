@@ -3,6 +3,7 @@
     <module name="Pragmatic_SystemConfigurationToolkit">
         <sequence>
             <module name="Magento_Config"/>
+            <module name="Magento_Integration"/>
         </sequence>
     </module>
 </config>

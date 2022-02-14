@@ -23,7 +23,14 @@
                     </depends>
                 </field>
                 <field id="paths_enabled" type="select" showInDefault="1" translate="label">
-                    <label>Show field's config path in the comments</label>
+                    <label>Show field's config path in the comments?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="resources_enabled" type="select" showInDefault="1" translate="label">
+                    <label>Show sort order of ACL Resources?</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <depends>
                         <field id="enabled">1</field>

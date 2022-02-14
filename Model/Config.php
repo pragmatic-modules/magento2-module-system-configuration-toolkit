@@ -10,6 +10,7 @@ class Config
     const ENABLED_XML_PATH = 'system_configuration_toolkit/general/enabled';
     const SORT_ORDERS_ENABLED_XML_PATH = 'system_configuration_toolkit/general/sort_orders_enabled';
     const PATHS_ENABLED_XML_PATH = 'system_configuration_toolkit/general/paths_enabled';
+    const RESOURCES_ENABLED_XML_PATH = 'system_configuration_toolkit/general/resources_enabled';
 
     /** @var ScopeConfigInterface */
     private $scopeConfig;
@@ -44,5 +45,13 @@ class Config
     public function isPathsEnabled() : bool
     {
         return $this->scopeConfig->isSetFlag(self::PATHS_ENABLED_XML_PATH);
+    }
+
+    /**
+     * @return bool
+     */
+    public function isResourcesEnabled() : bool
+    {
+        return $this->scopeConfig->isSetFlag(self::RESOURCES_ENABLED_XML_PATH);
     }
 }

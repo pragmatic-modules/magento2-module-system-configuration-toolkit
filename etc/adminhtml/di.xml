@@ -9,4 +9,8 @@
         <plugin name="Pragmatic_SystemConfigurationToolkit::add_config_path_to_comment"
                 type="Pragmatic\SystemConfigurationToolkit\Plugin\AddConfigPathToCommentPlugin"/>
     </type>
+    <type name="Magento\Framework\Acl\AclResource\Provider">
+        <plugin name="Pragmatic_SystemConfigurationToolkit::add_sort_orders_to_resource_labels"
+                type="Pragmatic\SystemConfigurationToolkit\Plugin\AddSortOrdersToResourceLabelsPlugin"/>
+    </type>
 </config>
