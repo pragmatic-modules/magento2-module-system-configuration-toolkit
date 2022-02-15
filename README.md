@@ -25,6 +25,7 @@ You can enable functionalities separately to display
 
 1. sort orders of tabs, sections, groups, and fields
 2. field full path
+3. ACL Resource sort fields and IDs
 
 Once you enable it, you have to clear `config` cache type by running `bin/magento cache:clean config`
 
@@ -56,3 +57,13 @@ System Configuration Toolkit module that will help save you time that you would 
 ## How It Works
 
 System Configuration Toolkit is using two plugins: (1) for sort orders that are appended into the tabs, sections, groups, and field labels, (2) for field paths that are appended into field comment
+
+## Changelog
+
+v.1.1.0 ACL Resources sort order, and IDs
+
+![](acl.png)
+
+v.1.0.0 initial release
+* sort orders of tabs, sections, groups, and fields
+* field full path
