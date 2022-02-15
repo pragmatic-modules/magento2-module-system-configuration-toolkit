@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Pragmatic\SystemConfigurationToolkit\Plugin;
 
 use Magento\Config\Model\Config\Structure\Element\Field;
+use Magento\Framework\Phrase;
 use Pragmatic\SystemConfigurationToolkit\Model\Config;
 
 class AddConfigPathToCommentPlugin
@@ -21,16 +22,17 @@ class AddConfigPathToCommentPlugin
 
     /**
      * @param Field $subject
-     * @param string $result
-     * @return string
+     * @param Phrase|string $result
+     * @return Phrase|string
      */
-    public function afterGetComment(Field $subject, string $result): string
+    public function afterGetComment(Field $subject, $result)
     {
         if (!$this->config->isEnabled() || !$this->config->isPathsEnabled()) {
             return $result;
         }
 
         $data = $subject->getData();
+        $result = (string)$result;
         $prefix = strlen($result) > 0 ? "<br><br>" : "";
 
         $result .= $prefix . $subject->getPath();
@@ -39,6 +41,6 @@ class AddConfigPathToCommentPlugin
             $result .= "<br>Comment model: {$data['comment']['model']}";
         }
 
-        return $result;
+        return __($result);
     }
 }
