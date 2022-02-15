@@ -54,6 +54,8 @@ System Configuration Toolkit module that will help save you time that you would 
 
 ![](after.png)
 
+![](acl.png)
+
 ## How It Works
 
 System Configuration Toolkit is using two plugins: (1) for sort orders that are appended into the tabs, sections, groups, and field labels, (2) for field paths that are appended into field comment
@@ -61,8 +63,6 @@ System Configuration Toolkit is using two plugins: (1) for sort orders that are 
 ## Changelog
 
 v.1.1.0 ACL Resources sort order, and IDs
-
-![](acl.png)
 
 v.1.0.0 initial release
 * sort orders of tabs, sections, groups, and fields
