@@ -35,7 +35,12 @@ class AddConfigPathToCommentPlugin
         $result = (string)$result;
         $prefix = strlen($result) > 0 ? "<br><br>" : "";
 
-        $result .= $prefix . $subject->getPath();
+        $path = <<<HTML
+<span title="Click to copy to 📋" style="cursor:pointer" onclick="navigator.clipboard.writeText(this.innerText).then(() => alert('Text copied'));">
+    {$subject->getPath()}
+</span>
+HTML;
+        $result .= $prefix . $path;
 
         if (isset($data['comment']['model'])) {
             $result .= "<br>Comment model: {$data['comment']['model']}";
