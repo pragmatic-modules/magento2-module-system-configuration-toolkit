@@ -62,6 +62,8 @@ System Configuration Toolkit is using two plugins: (1) for sort orders that are 
 
 ## Changelog
 
+v.1.1.1 Copy to clipboard (thanks to [@mehdichaouch](https://github.com/mehdichaouch))
+
 v.1.1.0 ACL Resources sort order, and IDs
 
 v.1.0.0 initial release
