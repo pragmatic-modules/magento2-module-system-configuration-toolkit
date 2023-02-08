@@ -62,6 +62,8 @@ System Configuration Toolkit is using two plugins: (1) for sort orders that are 
 
 ## Changelog
 
+v.1.2.0 replace copy alert with fade-in fade-out
+
 v.1.1.2 Copy to clipboard (thanks to [@mehdichaouch](https://github.com/mehdichaouch))
 
 v.1.1.1 bugfix
