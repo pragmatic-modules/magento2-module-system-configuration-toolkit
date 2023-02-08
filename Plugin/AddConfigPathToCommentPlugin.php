@@ -34,10 +34,12 @@ class AddConfigPathToCommentPlugin
         $data = $subject->getData();
         $result = (string)$result;
         $prefix = strlen($result) > 0 ? "<br><br>" : "";
-
         $path = <<<HTML
-<span title="Click to copy to 📋" style="cursor:pointer" onclick="navigator.clipboard.writeText(this.innerText).then(() => alert('Text copied'));">
-    {$subject->getPath()}
+<span title="Click to copy to 📋" style="cursor:pointer" onclick="
+navigator.clipboard.writeText(this.innerText).then(
+    () => require(['jquery'], ($) => $(this).find('.copy-notice').fadeIn().fadeOut(500))
+);">
+    {$subject->getPath()}<span class="copy-notice" style="color: green; display: none">&nbsp;&nbsp;copied.</span>
 </span>
 HTML;
         $result .= $prefix . $path;
