@@ -44,7 +44,7 @@ navigator.clipboard.writeText(this.innerText).then(
 HTML;
         $result .= $prefix . $path;
 
-        if (isset($data['comment']['model'])) {
+        if (isset($data['comment']) &&isset($data['comment']['model'])) {
             $result .= "<br>Comment model: {$data['comment']['model']}";
         }
 
